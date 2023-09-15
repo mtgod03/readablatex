@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{readablatex}
 
+\RequirePackage{ifthen}
+
 \NewDocumentCommand \BLOCK {r<> r() +m} {
   \csname#1\endcsname{#2}
   #3
@@ -10,4 +12,27 @@
   \begin{#1}#2
     #3
   \end{#1}
+}
+
+\NewDocumentCommand \+ {r<> D(){} +m} {
+  \ifthenelse{
+    \equal{#1}{part} \OR
+    \equal{#1}{part*} \OR
+    \equal{#1}{chapter} \OR
+    \equal{#1}{chapter*} \OR
+    \equal{#1}{section} \OR
+    \equal{#1}{section*} \OR
+    \equal{#1}{subsection} \OR
+    \equal{#1}{subsection*} \OR
+    \equal{#1}{subsubsection} \OR
+    \equal{#1}{subsubsection*} \OR
+    \equal{#1}{paragraph} \OR
+    \equal{#1}{paragraph*} \OR
+    \equal{#1}{subparagraph} \OR
+    \equal{#1}{subparagraph*}
+  } {
+    \BLOCK<#1>(#2){#3}
+  } {
+    \ENV<#1>(#2){#3}
+  }
 }
