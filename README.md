@@ -51,3 +51,33 @@ as
   \label{fig:sample}
 }
 ```
+
+### `\BLOCK` command
+
+The `\BLOCK` command makes chapters, sections, etc. more readable. Using this command, you can also write
+
+```latex
+\headingcommand{headingname}
+Contents comes here.
+```
+
+as
+
+```latex
+\BLOCK<headingcommand>(headingname) {
+  Contents comes here.
+}
+```
+
+#### Examples
+
+```latex
+% By usual LaTeX nonation
+\section{Sample}
+This is a sample section.
+
+% With \BLOCK command
+\BLOCK<section>(Sample) {
+  This is a sample section.
+}
+```
