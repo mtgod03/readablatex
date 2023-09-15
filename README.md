@@ -4,7 +4,7 @@ ReadabLaTeX is an extension of $\LaTeX$'s notation.
 
 In my opinion, LaTeX's notation is redundunt and not readable. Using ReadabLaTeX enables you to write LaTeX documents briefly and readably.
 
-- **Readable**: Surrounding environments by `{}` instead of `\begin` and `\end` makes your documents more brief and readable.
+- **Readable**: Surrounding environments with `{}` instead of `\begin` and `\end` makes your documents more brief and readable.
 - **Flexible**: You can use ReadabLaTeX partially as well as fully.
 - **Compatible**: As ReadabLaTeX is just a LaTeX package, every LaTeX command can of course be used together with ReadabLaTeX.
 
@@ -74,7 +74,7 @@ and
 }
 ```
 
-are the same as
+mean the same as
 
 ```latex
 \documentclass{article}
