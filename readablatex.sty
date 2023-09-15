@@ -1,2 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{readablatex}
+
+\NewDocumentCommand \ENV {r<> D(){} +m} {
+  \begin{#1}#2
+    #3
+  \end{#1}
+}
