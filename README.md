@@ -81,3 +81,26 @@ This is a sample section.
   This is a sample section.
 }
 ```
+
+### `\+` command
+
+The `\+` command is the integrated shorthand of `\ENV` and `\BLOCK`. For example, this command enables you to write
+
+```latex
+\section{Quadratic Function}
+The following is an example of quadratic function.
+\begin{equation*}
+  f(x) = ax^2 + bx + c
+\end{equation*}
+```
+
+as
+
+```latex
+\+<section>(Quadratic Function) {
+  The following is an example of quadratic function.
+  \+<equation*> {
+    f(x) = ax^2 + bx + c
+  }
+}
+```
