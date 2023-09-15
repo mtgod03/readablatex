@@ -1,6 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{readablatex}
 
+\NewDocumentCommand \BLOCK {r<> r() +m} {
+  \csname#1\endcsname{#2}
+  #3
+}
+
 \NewDocumentCommand \ENV {r<> D(){} +m} {
   \begin{#1}#2
     #3
