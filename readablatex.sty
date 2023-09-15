@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{readablatex}
 
+\RequirePackage{xparse}  % In LaTeX releases after 2020/10/01, this package is not necessary.
 \RequirePackage{ifthen}
 
 \NewDocumentCommand \BLOCK {r<> r() +m} {
